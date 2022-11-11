@@ -1,0 +1,17 @@
+<!-- <div style="width: 100%; background: blue; height: 200px;">A</div> -->
+<header class="header">
+  <div class="header__logo">
+      <img class="header__img" src="./assets/img/logo.png" alt="logo" width="80"/>
+  </div>
+  <app-search (search)="handleSearch($event)" class="header__searchbar"></app-search>
+  <div class="header__cart">
+    <p class="header__text">
+      Resumen
+      de Compras</p><mat-icon>shopping_cart</mat-icon>
+  </div>
+  <div class="header__user">
+    <mat-icon>person</mat-icon>
+    <p class="header__text">Juan
+    <mat-icon>arrow_drop_down</mat-icon></p>
+  </div>
+</header>

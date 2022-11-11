@@ -1,0 +1,46 @@
+@import "../../../../assets/scss/global/variables";
+
+.search {
+  width: 100%;
+  padding: 0;
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    border: 1px solid $ui-04;
+    padding: 5px;
+    border-radius: 5px;
+    gap: 5px;
+  }
+  &__bar {
+    display: flex;
+    align-items: center;
+  }
+  &__input{
+    color: $ui-03;
+    margin: 5px;
+    font-weight: bold;
+  }
+  .placeholder {
+    color: $ui-03;
+    font-weight: bold;
+    position: absolute;
+  }
+  .haveSearch{
+    display: none;
+  }
+}
+::ng-deep .mat-form-field-underline{
+  display: none;
+}
+.mat-focused .placeholder {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .search {
+    mat-icon{
+      min-width: 20px;
+    }
+  }
+}

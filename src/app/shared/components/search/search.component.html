@@ -1,0 +1,9 @@
+<mat-form-field class="search">
+  <div class="search__container">
+    <mat-icon>search</mat-icon>
+    <div class="search__bar">
+      <input [formControl]="search" class="search__input" matInput>
+      <mat-placeholder class="placeholder" [ngClass]="{haveSearch: haveSearch}">¿Qué estás buscando?</mat-placeholder>
+    </div>
+  </div>
+</mat-form-field>
