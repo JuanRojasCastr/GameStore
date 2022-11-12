@@ -1,0 +1,48 @@
+@import "../../../../assets/scss/global/variables";
+
+.home {
+  background-color: $ui-02;
+  padding-top: 5%;
+  height: fit-content;
+  min-height: 100%;
+
+  &__title {
+    padding: 0 4%;
+  }
+  &__infocard {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    background-color: white;
+    border: 1px solid $ui-04;
+    box-shadow: 0px 0px 15px $ui-01;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 3vh;
+    text-align: center;
+    height: 20vh;
+    width: fit-content;
+    max-width: 40%;
+    padding: 50px;
+    border-radius: 15px;
+    transform: translateX(-50%) translateY(50%);
+    line-height: 1;
+
+    mat-icon {
+      min-height: fit-content;
+      transform: scale(3);
+      color: $mainColor;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .home {
+    &__infocard {
+      height: 25vh;
+      padding: 20px;
+    }
+  }
+}

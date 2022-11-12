@@ -1,0 +1,12 @@
+<div class="home">
+  <h1 class="home__title">Todos los Juegos</h1>
+  <app-cards-games *ngIf="searchStatus == ''" [gamesList]="gameList" class="home__content" ></app-cards-games>
+  <div *ngIf="searchStatus == 'empty'" class="home__infocard">
+    <mat-icon>search</mat-icon>
+    ¡Comienza a buscar!
+  </div>
+  <div *ngIf="searchStatus == 'notf'" class="home__infocard">
+    <mat-icon>warning</mat-icon>
+    ¡Lo siento no encontramos ningún juego relacionado!
+  </div>
+</div>

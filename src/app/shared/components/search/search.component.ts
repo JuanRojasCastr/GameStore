@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { SearchQueryService } from '../../services/search-service/search-query.service';
 
 @Component({
   selector: 'app-search',
@@ -10,18 +11,19 @@ export class SearchComponent implements OnInit {
 
   haveSearch: boolean = false;
 
-  constructor() { }
+  constructor(private searchService: SearchQueryService) { }
 
   ngOnInit(): void {
     this.search.valueChanges.subscribe(value => {
       this.haveSearch = value != '' ?  true: false;
-      console.log(this.haveSearch);
-      this.searchEmitter.emit(value)
     });
   }
 
   search = new FormControl('');
 
-  @Output('search') searchEmitter = new EventEmitter<string | null >();
+  sendQuery(value: any) {
+    let searchText = value.target.value;
+    this.searchService.setSearQuery(searchText == null ? '': searchText);
+  }
 
 }

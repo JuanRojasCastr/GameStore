@@ -1,9 +1,9 @@
 <!-- <div style="width: 100%; background: blue; height: 200px;">A</div> -->
 <header class="header">
-  <div class="header__logo">
+  <div class="header__logo" [ngClass]="{offset: offset}">
       <img class="header__img" src="./assets/img/logo.png" alt="logo" width="80"/>
   </div>
-  <app-search (search)="handleSearch($event)" class="header__searchbar"></app-search>
+  <app-search class="header__searchbar"></app-search>
   <div class="header__cart">
     <p class="header__text">
       Resumen

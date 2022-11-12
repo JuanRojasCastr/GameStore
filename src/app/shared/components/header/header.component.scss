@@ -10,6 +10,7 @@
   height: 75px;
   color: $mainColor;
   padding: 0 40px;
+  z-index: 100;
 
   .flex-container {
     display: flex;
@@ -25,10 +26,12 @@
     border-bottom-right-radius: 15px;
     padding: 2% 4%;
     height: 100%;
+    transition: padding 0.7s;
   }
 
   &__cart{
     @extend .flex-container;
+    cursor: pointer;
   }
 
   &__img {
@@ -38,6 +41,7 @@
   &__searchbar{
     width: 53%;
     margin: 10px;
+    cursor: text;
   }
 
   &_content{
@@ -48,12 +52,18 @@
     @extend .flex-container;
     color: $mainColor;
     margin: 10px;
+    cursor: pointer;
   }
 
   &__text {
     @extend .flex-container;
     font-weight: bold;
+    text-align: center;
     margin: 10px;
+  }
+
+  .offset {
+    padding: 0.3% 4%;
   }
 
   p {
@@ -61,7 +71,13 @@
     margin: 10px;
   }
 }
-
+@media screen and (max-width: 1800px) {
+  .header {
+    &__img {
+      height: 7vh;
+    }
+  }
+}
 @media screen and (max-width: 767px) {
   .header {
     gap: 5px;
@@ -73,7 +89,7 @@
 
     &__img {
       height: 6vh;
-      width: 50px;
+      width: 60px;
     }
   }
 }

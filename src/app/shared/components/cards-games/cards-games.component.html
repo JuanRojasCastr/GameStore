@@ -1,0 +1,9 @@
+<div class="cards">
+  <div class="cards__card" *ngFor="let game of gamesList">
+    <div class="card__container">
+      <img class="card__image" height="120"  src="{{game.thumb}}" alt="img">
+      <h2 class="card__title">{{game.external}}</h2>
+      <button class="card__button">Ver detalles</button>
+    </div>
+  </div>
+</div>

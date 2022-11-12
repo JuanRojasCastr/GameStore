@@ -13,7 +13,7 @@ import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
-import { HomeComponent } from './main-views/home/home.component';
+import { CoreModule } from './shared/core/core.module';
 
 
 @NgModule({
@@ -21,8 +21,7 @@ import { HomeComponent } from './main-views/home/home.component';
     AppComponent,
     HeaderComponent,
     MainLayoutComponent,
-    SearchComponent,
-    HomeComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +31,8 @@ import { HomeComponent } from './main-views/home/home.component';
     MatInputModule,
     ReactiveFormsModule,
     FormsModule,
-    MatIconModule
+    MatIconModule,
+    CoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]

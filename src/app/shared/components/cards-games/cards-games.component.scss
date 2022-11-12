@@ -1,0 +1,50 @@
+@import "../../../../assets/scss/global/variables";
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.cards{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,
+  minmax(250px, 1fr));
+  padding: 20px 6vw;
+  grid-gap: 20px;
+
+  &__card{
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 0 20px $ui-01;
+  }
+}
+.card {
+  &__container{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+  &__image{
+    margin-bottom: 30px;
+    z-index: 1;
+    max-width: 220px;
+  }
+  &__button{
+    padding: 10px 15px;
+    font-size: medium;
+    border: none;
+    background-color: $secondColor;
+    color: white;
+    border-radius: 7px;
+    &:hover {
+      cursor: pointer;
+      background-color: $thirdColor;
+    }
+  }
+  &__title{
+    text-align: center;
+  }
+}
