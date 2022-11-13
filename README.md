@@ -1,27 +1,40 @@
-# GameStore
+# Games Store
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.8.
+This project is a frontend responsive application developed with Angular, where you can search and detail thousands of games.
 
-## Development server
+The deployed app url:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+https://mygamestore.netlify.app/
 
-## Code scaffolding
+The application have two main views, first the home where you can see the result of your searches from the header, and the detail view of each game.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+![](https://media.discordapp.net/attachments/584593411567517710/1041466896551260220/image.png?width=1377&height=683)
 
-## Build
+This view have 3 different states, the first time you enter here you have no searches, so the view is empty, from the header you can start searching,
+once you search something pressing 'enter' the view will change:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+![](https://media.discordapp.net/attachments/584593411567517710/1041467738050285568/image.png?width=1377&height=683)
 
-## Running unit tests
+Notice that when you scroll down the logo of the header change its height with a soft transition and when you are over a button it changes his color:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+![](https://media.discordapp.net/attachments/584593411567517710/1041469455944912966/image.png?width=1440&height=645)
 
-## Running end-to-end tests
+Now if you search something that doesn't have any result related another advice will appear:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+![](https://media.discordapp.net/attachments/584593411567517710/1041468278507315200/image.png?width=1377&height=682)
 
-## Further help
+After you choose a game to see the details pressing the button on the card you will be redirected to the second main view,
+here you can look the game with few more details like different offers, and the best offer ever, you can scroll down over the offers,
+and when you are over one it changes of color.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+![](https://media.discordapp.net/attachments/584593411567517710/1041470275805511720/image.png?width=1377&height=683)
+
+Finally, if you want to go back, you can do it from 3 ways, making a new search on the header, pressing the logo, or using the breadcrumb.
+
+All the data used on the app its taken from:
+
+    https://www.cheapshark.com/api/1.0/games
+
+## Created by
+
+- Juan Camilo Rojas Castro
