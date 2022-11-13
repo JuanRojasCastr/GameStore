@@ -1,6 +1,6 @@
 <!-- <div style="width: 100%; background: blue; height: 200px;">A</div> -->
 <header class="header">
-  <div class="header__logo" [ngClass]="{offset: offset}">
+  <div (click)="navigateHome()" class="header__logo" [ngClass]="{offset: offset}">
       <img class="header__img" src="./assets/img/logo.png" alt="logo" width="80"/>
   </div>
   <app-search class="header__searchbar"></app-search>

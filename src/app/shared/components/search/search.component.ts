@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { Router } from '@angular/router';
 import { SearchQueryService } from '../../services/search-service/search-query.service';
 
 @Component({
@@ -11,7 +12,10 @@ export class SearchComponent implements OnInit {
 
   haveSearch: boolean = false;
 
-  constructor(private searchService: SearchQueryService) { }
+  constructor(
+    private searchService: SearchQueryService,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
     this.search.valueChanges.subscribe(value => {
@@ -24,6 +28,6 @@ export class SearchComponent implements OnInit {
   sendQuery(value: any) {
     let searchText = value.target.value;
     this.searchService.setSearQuery(searchText == null ? '': searchText);
+    if(this.router.url != '/') this.router.navigate(['']);
   }
-
 }

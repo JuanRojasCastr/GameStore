@@ -10,6 +10,10 @@ const routes: Routes = [
       {
         path: '',
         loadChildren: () => import('./main-views/home/home.module').then(m => m.HomeModule)
+      },
+      {
+        path: '',
+        loadChildren: () => import('./main-views/detail-game/detail-game.module').then(m => m.DetailGameModule)
       }
     ]
   }

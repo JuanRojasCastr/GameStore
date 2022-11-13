@@ -1,0 +1,32 @@
+<div class="detail-game">
+  <article class="container">
+    <div class="content">
+      <div class="breadcrumb"><a routerLink="/">Home</a> / {{game?.info?.title}}</div>
+      <div class="content__info">
+        <h1 class="title">{{game?.info?.title}}</h1>
+        <div class="content__bestdeal">
+          <p>${{game?.cheapestPriceEver?.price}}</p>
+          <p>{{date}}</p>
+          <img class="content__icon" width="30px" src="./assets/img/fire.png" alt="">
+        </div>
+      </div>
+      <div class="content__image">
+        <img src="{{ game?.info?.thumb }}" alt="">
+      </div>
+    </div>
+  </article>
+  <aside class="sidebar">
+    <h1 class="title">Ofertas</h1>
+    <div class="sidebar__deals">
+      <div *ngFor="let deal of game?.deals" class="sidebar__deal">
+        <div class="sidebar__info">
+          <p class="subtitle">{{game?.info?.title}}</p>
+          <p>Precio: ${{deal.price}}</p>
+          <p>Precio Retail: ${{deal.retailPrice}}</p>
+          <p>Ahorro: ${{deal.savings}}</p>
+        </div>
+        <img class="sidebar__image" width="60px" height="60px" src="{{ game?.info?.thumb }}" alt="">
+      </div>
+    </div>
+  </aside>
+</div>

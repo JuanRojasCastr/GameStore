@@ -31,7 +31,6 @@ export class HomeComponent implements OnInit {
         else if (!games.length && this.searchQ != '' ) this.searchStatus = 'notf';
         else this.searchStatus = '';
         this.gameList = games;
-        console.log(games);
       });
       this.searchQ = value;
     })

@@ -3,7 +3,7 @@
     <div class="card__container">
       <img class="card__image" height="120"  src="{{game.thumb}}" alt="img">
       <h2 class="card__title">{{game.external}}</h2>
-      <button class="card__button">Ver detalles</button>
+      <button class="card__button" routerLink="/game/{{game.gameID}}" routerLinkActive="active">Ver detalles</button>
     </div>
   </div>
 </div>
